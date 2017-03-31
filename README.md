@@ -1,9 +1,11 @@
-Deuscoin Core integration/staging tree
+Deuscoin Core integration/staging tree for GUI use
 =====================================
 
+<!-- 
 [![Build Status](https://travis-ci.org/deuscoin/deuscoin.svg?branch=master)](https://travis-ci.org/deuscoin/deuscoin)
+ -->
 
-https://deuscoincore.org
+https://deuscoin.org
 
 What is Deuscoin?
 ----------------
@@ -14,9 +16,11 @@ with no central authority: managing transactions and issuing money are carried
 out collectively by the network. Deuscoin Core is the name of open source
 software which enables the use of this currency.
 
+<!-- 
 For more information, as well as an immediately useable, binary version of
 the Deuscoin Core software, see https://deuscoin.org/en/download, or read the
-[original whitepaper](https://deuscoincore.org/deuscoin.pdf).
+[original whitepaper](https://deuscoin.org/deuscoin.pdf).
+ -->
 
 License
 -------
@@ -28,16 +32,20 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/deuscoin/deuscoin/tags) are created
+completely stable. [Tags](https://github.com/hideoussquid/deuscoin-core-gui/tags) are created
 regularly to indicate new official, stable release versions of Deuscoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
+<!-- 
 The developer [mailing list](https://lists.linuxfoundation.org/mailman/listinfo/deuscoin-dev)
 should be used to discuss complicated or controversial changes before working
 on a patch set.
+ -->
 
+<!-- 
 Developer IRC can be found on Freenode at #deuscoin-core-dev.
+ -->
 
 Testing
 -------
@@ -67,6 +75,7 @@ code. This is especially important for large or high-risk changes. It is useful
 to add a test plan to the pull request description if testing the changes is
 not straightforward.
 
+<!-- 
 Translations
 ------------
 
@@ -80,3 +89,4 @@ Translations are periodically pulled from Transifex and merged into the git repo
 pull from Transifex would automatically overwrite them again.
 
 Translators should also subscribe to the [mailing list](https://groups.google.com/forum/#!forum/deuscoin-translators).
+ -->
