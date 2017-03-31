@@ -99,7 +99,7 @@ Ensure gitian-builder is up-to-date:
 
     pushd ./gitian-builder
     mkdir -p inputs
-    wget -P inputs https://deuscoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
+    wget -P inputs https://bitcoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
     wget -P inputs http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz
     popd
 
@@ -307,9 +307,9 @@ deuscoin.org (see below for deuscoin.org update instructions).
 
   - deuscoin-dev and deuscoin-core-dev mailing list
 
-  - Deuscoin Core announcements list https://deuscoincore.org/en/list/announcements/join/
+  - Deuscoin Core announcements list https://bitcoincore.org/en/list/announcements/join/
 
-  - deuscoincore.org blog post
+  - bitcoincore.org blog post
 
   - Update title of #deuscoin on Freenode IRC
 

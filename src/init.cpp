@@ -513,7 +513,7 @@ std::string HelpMessage(HelpMessageMode mode)
 std::string LicenseInfo()
 {
     const std::string URL_SOURCE_CODE = "<https://github.com/deuscoin/deuscoin>";
-    const std::string URL_WEBSITE = "<https://deuscoincore.org>";
+    const std::string URL_WEBSITE = "<https://bitcoincore.org>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2009, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +

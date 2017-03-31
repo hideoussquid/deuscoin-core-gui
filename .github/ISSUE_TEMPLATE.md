@@ -4,7 +4,7 @@ This issue tracker is only for technical issues related to deuscoin-core.
 
 General deuscoin questions and/or support requests and are best directed to the [Deuscoin StackExchange](https://deuscoin.stackexchange.com).
 
-For reporting security issues, please read instructions at [https://deuscoincore.org/en/contact/](https://deuscoincore.org/en/contact/).
+For reporting security issues, please read instructions at [https://bitcoincore.org/en/contact/](https://bitcoincore.org/en/contact/).
 
 ### Describe the issue
 
