@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Deuscoin Core
+Comment=Connect to the Deuscoin P2P Network
+Comment[de]=Verbinde mit dem Deuscoin peer-to-peer Netzwerk
+Comment[fr]=Deuscoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Deuscoin, eşten eşe kriptografik sanal para birimi
+Exec=deuscoin-qt %u
+Terminal=false
+Type=Application
+Icon=deuscoin128
+MimeType=x-scheme-handler/deuscoin;
+Categories=Office;Finance;

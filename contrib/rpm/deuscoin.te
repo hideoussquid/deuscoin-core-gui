@@ -1,0 +1,81 @@
+policy_module(deuscoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type deuscoin_t;
+type deuscoin_exec_t;
+init_daemon_domain(deuscoin_t, deuscoin_exec_t)
+
+permissive deuscoin_t;
+
+type deuscoin_initrc_exec_t;
+init_script_file(deuscoin_initrc_exec_t)
+
+type deuscoin_conf_t;
+files_type(deuscoin_conf_t)
+
+type deuscoin_var_lib_t;
+files_type(deuscoin_var_lib_t)
+
+type deuscoin_var_run_t;
+files_type(deuscoin_var_run_t)
+
+type deuscoin_port_t;
+corenet_port(deuscoin_port_t)
+
+########################################
+#
+# deuscoin local policy
+#
+allow deuscoin_t self:process { fork };
+
+allow deuscoin_t self:fifo_file rw_fifo_file_perms;
+allow deuscoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(deuscoin_t, deuscoin_conf_t, deuscoin_conf_t)
+manage_files_pattern(deuscoin_t, deuscoin_conf_t, deuscoin_conf_t)
+
+manage_dirs_pattern(deuscoin_t, deuscoin_var_lib_t, deuscoin_var_lib_t)
+manage_files_pattern(deuscoin_t, deuscoin_var_lib_t, deuscoin_var_lib_t)
+files_var_lib_filetrans(deuscoin_t, deuscoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(deuscoin_t, deuscoin_var_run_t, deuscoin_var_run_t)
+manage_files_pattern(deuscoin_t, deuscoin_var_run_t, deuscoin_var_run_t)
+
+sysnet_dns_name_resolve(deuscoin_t)
+corenet_all_recvfrom_unlabeled(deuscoin_t)
+
+allow deuscoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(deuscoin_t)
+corenet_tcp_sendrecv_generic_node(deuscoin_t)
+corenet_tcp_sendrecv_all_ports(deuscoin_t)
+corenet_tcp_bind_generic_node(deuscoin_t)
+
+gen_require(`
+    type deuscoin_port_t;
+')
+allow deuscoin_t deuscoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type deuscoin_port_t;
+')
+allow deuscoin_t deuscoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(deuscoin_t)
+
+files_read_etc_files(deuscoin_t)
+
+miscfiles_read_localization(deuscoin_t)
+
+sysnet_dns_name_resolve(deuscoin_t)
+
+allow deuscoin_t deuscoin_exec_t:file execute_no_trans;
+allow deuscoin_t self:process setsched;
+corecmd_exec_ls(deuscoin_t)
+corenet_tcp_connect_http_port(deuscoin_t)
+dev_read_urand(deuscoin_t)
+fs_getattr_xattr_fs(deuscoin_t)
+kernel_read_system_state(deuscoin_t)
